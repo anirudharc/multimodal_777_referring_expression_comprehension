@@ -5,11 +5,11 @@ import json
 train_data = json.load(open('google_refexp_train_201511_coco_aligned_multibox_umd.json'))
 val_data = json.load(open('google_refexp_val_201511_coco_aligned_multibox_umd.json'))
 
-train_images = ['dataset/train2014/' + image_id for image_id in train_data['images']]
-val_images = ['dataset/val2014/' + image_id for image_id in val_data['images']]
+train_images = ['/home/ubuntu/rcanirudha/multimodal_777_referring_expression_comprehension/datasets/train2014/' + image_id for image_id in train_data['images']]
+val_images = ['/home/ubuntu/rcanirudha/multimodal_777_referring_expression_comprehension/datasets/val2014/' + image_id for image_id in val_data['images']]
 
-train_images_filename = ['dataset/train2014/' + train_data['images'][image_id]['file_name'] for image_id in train_data['images']]
-val_images_filename = ['dataset/val2014/' + val_data['images'][image_id]['file_name'] for image_id in val_data['images']]
+train_images_filename = ['/home/ubuntu/rcanirudha/multimodal_777_referring_expression_comprehension/datasets/train2014/' + train_data['images'][image_id]['file_name'] for image_id in train_data['images']]
+val_images_filename = ['/home/ubuntu/rcanirudha/multimodal_777_referring_expression_comprehension/datasets/val2014/' + val_data['images'][image_id]['file_name'] for image_id in val_data['images']]
 
 train_bboxes_list = []
 for image_id in train_data['images']:
